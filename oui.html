@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus France Projet</title>
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=VT323&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=VT323&display=swap');
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(image/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        header {
+            position: fixed;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        header .logo img {
+            height: 130px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            font-size: 1.1em;
+            transition: color 0.5s;
+        }
+        nav a.bleu:hover {
+            color: blue;
+        }
+        nav a.blanc:hover {
+            color: aliceblue;
+        }
+        nav a.rouge:hover {
+            color: red;
+        }
+        .titre {
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2.2vw;
+            margin-bottom: 100px;
+            text-align: center;
+            color: #39FF14;
+        }
+        .paragraph {
+            max-width: 900px;
+            color: white;
+            font-size: 1.3vw;
+            text-align: center;
+            font-family: "Source Code Pro", monospace;
+            font-weight: 400;
+            font-style: normal;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 70px; /* pour éviter le header fixe */
+        }
+        /* Section Contact icônes */
+        .contact-icons {
+            margin-top: 25px;
+        }
+        .contact-icons a {
+            color: #fff;
+            margin: 0 18px;
+            font-size: 2.7em;
+            vertical-align: middle;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .contact-icons a:hover {
+            color: #39FF14;
+            transform: scale(1.1);
+        }
+        /* Responsive simple */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                padding: 8px 10px;
+                height: auto;
+            }
+            header .logo img {
+                height: 60px;
+            }
+            nav a {
+                font-size: 1em;
+                margin: 8px 10px 0 0;
+            }
+            section {
+                min-height: auto;
+                padding: 100px 5px 30px 5px;
+            }
+            .titre {
+                font-size: 1.3em;
+                margin-bottom: 30px;
+            }
+            .paragraph {
+                font-size: 1em;
+                padding: 14px 10px;
+                max-width: 98vw;
+            }
+            .contact-icons a {
+                font-size: 2em;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/ChatGPT Image 3 oct. 2025, 17_41_27.png" alt="Logo">
+        </div>
+        <nav>
+           <a href="#Acceuil" class="bleu">Acceuil</a>
+           <a href="#parcours" class="bleu">Mon parcours</a>
+           <a href="#informatique" class="bleu">Pourquoi l'informatique</a>
+           <a href="#academique" class="blanc">objectif academique</a>
+           <a href="#Professionnel" class="rouge">objectif professionnel</a>
+           <a href="#Remerciement" class="rouge">Remerciement</a>
+           <a href="#contact" class="rouge">Contact</a>
+        </nav>
+    </header>
+
+    <section id="Acceuil" class="Acceuil">
+        <h1 class="titre"> Bienvenue sur mon site personnel "Campus France Projet" </h1>
+        <p class="paragraph">« L’étude a été pour moi le souverain remède contre les dégoûts de la vie, n’ayant jamais eu un chagrin qu’une heure de lecture n’ait dissipé. » – Montesquieu</p>
+    </section> 
+
+    <section id="parcours" class="parcours">
+        <h1 class="titre"> Mon parcours</h1>
+        <p class="paragraph">J’ai obtenu mon baccalauréat en Math-Technique avec la mention “Bien” en 2023, notamment avec d’excellentes notes en mathématiques.
+Après le bac, j’ai intégré une classe préparatoire en sciences et technologies, mais je me suis rapidement rendu compte que ma véritable passion était tournée vers l’informatique et le domaine digital.
+J’ai donc pris la décision de me réorienter vers ce domaine, une étape importante qui m’a permis de mieux définir mon projet d’avenir.
+Aujourd’hui, je poursuis mes études en deuxième année de licence en informatique à l’Université des Sciences et de la Technologie Houari Boumediene (USTHB). Cette formation me permet d’acquérir des bases solides en programmation, en algorithmique, ainsi qu’en design web et cybersécurité.
+        </p>
+    </section>
+    <section id="informatique" class="informatique">
+        <h1 class="titre"> Pourquoi l'informatique </h1>
+        <p class="paragraph">L’informatique a été pour moi une véritable révélation, surtout après la révolution qu’a apportée l’intelligence artificielle dans le monde de la technologie. Comme beaucoup d’autres, j’ai été émerveillé par cette avancée — même si, en réalité, cette technologie n’est pas aussi récente qu’elle en a l’air.
+Cet intérêt m’a poussé à m’y intéresser de plus près et à approfondir mes recherches. C’est ainsi que j’ai découvert le domaine de la cybersécurité, qui m’a énormément plu.
+Ce qui me passionne également dans l’informatique, c’est la liberté de création qu’elle offre : on peut se lancer en tant que Freelancer à tout moment, développer des idées innovantes et peut-être même  qu’un simple étudiant comme moi peut révolutionner le monde.
+        </p>
+    </section>
+    <section id="academique" class="academique">
+        <h1 class="titre">Objectif academique</h1>
+        <p class="paragraph">Mon objectif académique est simple, clair et précis : acquérir une base solide en informatique et en mathématiques, tout en profitant de ma période universitaire pour prendre de l’avance dans la maîtrise de la cybersécurité, ainsi que dans plusieurs autres secteurs de l’informatique, notamment l’intelligence artificielle et le développement web, afin de devenir un informaticien polyvalent et professionnel.</p>
+    </section>
+    <section id="Professionnel" class="Professionnel">
+        <h1 class="titre"> Objectif professionnel</h1>
+        <p class="paragraph">Professionnellement, créer ma propre entreprise est pour moi l’objectif ultime. J’aimerais pouvoir fournir des services de sécurité à des entreprises multinationales et gérer tout l’aspect réseau et sécurité.
+Des postes comme Responsable de la Sécurité des Systèmes d’Information (RSSI) m’intéressent tout autant. Je compte bien atteindre cet objectif et laisser ma trace dans ce domaine, en y apportant pourquoi pas une nouvelle révolution.
+        </p>
+    </section>
+    <section id="Remerciement" class="Remerciement">
+        <h1 class="titre">Remerciement</h1>
+        <p class="paragraph">Je vous remercie d’avoir prêté attention à mon dossier et d’avoir pris le temps de visiter mon site. J’espère vous avoir transmis mes envies et mes objectifs avec clarté. Dans l’attente d’une réponse favorable, je vous prie d’agréer mes salutations les plus respectueuses.</p>
+    </section>
+    <section id="contact" class="contact">
+        <h1 class="titre"> Contact</h1>
+        <p class="paragraph">Vous pouvez me contacter via les réseaux ci-dessous :</p>
+        <div class="contact-icons">
+            <a href="https://github.com/TON_NOM_UTILISATEUR" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:tonemail@email.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/TON_NOM_UTILISATEUR" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
