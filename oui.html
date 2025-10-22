@@ -10,6 +10,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=VT323&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=VT323&display=swap');
 
+    body{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(image/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+     }
     *{
         margin: 0;
         padding: 0;
@@ -18,34 +25,31 @@
     html{
         scroll-behavior: smooth;
     }
-    body{
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(image/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-
     header{
-        position: fixed;
-        height: 70px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 50px;
-        background: rgba(0,0,0,0.5);
-        z-index: 1000;
+         position: fixed;
+         height: 70px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px 50px;
+         background: rgba(0,0,0,0.5);
+         z-index: 1000;
+
+         
+
     }
     header .logo img{
       height: 130px;
+      
     }
     nav a{
-      text-decoration: none;
+       text-decoration: none;
       color: white;
       margin-left: 20px;
       font-size: 1.1em;
       transition: color 0.5s;
+
     }
     nav a.bleu:hover{
      color: blue;
@@ -55,57 +59,21 @@
     }
     nav a.rouge:hover{
         color: red;
-    }
+        }
 
-    /* Menu burger */
-    #menu-toggle {
-        display: none;
-    }
-    .menu-icon {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
-    }
-    .menu-icon span {
-        width: 30px;
-        height: 3px;
-        background: white;
-        transition: 0.3s;
-    }
-
-    /* Navigation responsive */
-    @media (max-width: 768px) {
-      nav {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(0,0,0,0.8);
-        flex-direction: column;
-        align-items: center;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-      #menu-toggle:checked ~ nav {
-        max-height: 300px;
-      }
-      nav a {
-        margin: 15px 0;
-      }
-      .menu-icon {
-        display: flex;
-      }
-    }
-
+    
+    
     .titre{
        font-family: "VT323", monospace;
        font-weight: 400;
+       font-style: normal;
        font-size: 2.2vw;
-       margin-bottom: 100px;
-       text-align: center;
-       color: #39FF14;
+       
+         margin-bottom: 100px;
+  text-align: center;
+        color: #39FF14
+    
+       
     }
     .paragraph{
        max-width: 900px;
@@ -113,54 +81,111 @@
        font-size: 1.3vw;
        text-align: center;
        font-family: "Source Code Pro", monospace;
-       background: rgba(255, 255, 255, 0.1);
-       backdrop-filter: blur(10px);
-       border-radius: 15px;
-       padding: 25px 40px;
-       border: 1px solid rgba(255, 255, 255, 0.3);
-       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-    }
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; 
 
-    section {
-      height: 100vh; 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
 
-    .icones-contact {
-      margin-top: 25px;
-    }
-    .icones-contact a {
-      color: #fff;
-      margin: 0 18px;
-      font-size: 2.7em;
-      vertical-align: middle;
-      transition: color 0.2s, transform 0.2s;
-    }
-    .icones-contact a:hover {
-      color: #39FF14;
-      transform: scale(1.1);
-    }
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+  
+
+
+   section {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.icones-contact {
+  margin-top: 25px;
+}
+.icones-contact a {
+  color: #fff;
+  margin: 0 18px;
+  font-size: 2.7em;
+  vertical-align: middle;
+  transition: color 0.2s, transform 0.2s;
+}
+.icones-contact a:hover {
+  color: #39FF14;
+  transform: scale(1.1);
+}
+/* Bouton burger — caché par défaut sur PC */
+.menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Menu mobile caché par défaut */
+.mmenu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  list-style: none;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.mmenu li {
+  margin: 15px 0;
+}
+
+.mmenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Quand on coche la case, on affiche le menu mobile */
+#Menu:checked ~ .mmenu {
+  display: block;
+}
+
+/* Responsive — affichage sur mobile */
+@media (max-width: 768px) {
+  nav {
+    display: none;  /* On cache le menu desktop */
+  }
+
+  .menu {
+    display: flex;  /* On montre le burger */
+  }
+}
+
+
 
 </style>
 <body>
     <header>
-        <div class="logo"> 
-            <img src="image/ChatGPT Image 3 oct. 2025, 17_41_27.png" alt="">
-        </div>
-
-        <!-- Menu burger -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
+        
+    <div class="logo"> <img src="image/ChatGPT Image 3 oct. 2025, 17_41_27.png" alt=""></div>
         <nav>
            <a href="#Acceuil" class="bleu">Acceuil</a>
            <a href="#parcours" class="bleu">Mon parcours</a>
@@ -169,24 +194,84 @@
            <a href="#Professionnel" class="rouge">objectif professionnel</a>
            <a href="#Remerciement" class="rouge">Remerciement</a>
            <a href="#contact" class="rouge">Contact</a>
+           
         </nav>
+            <input type="" id="Menu">
+            <label for="Menu" class="menu"><span></span>
+            <span></span>
+            <span></span></label>
+            <ul class="mmenu">
+                <li><a href="#Acceuil" class="bleu">Acceuil</a></li>
+                <li><a href="#parcours" class="bleu">Mon parcours</a></li>
+                <li><a href="#informatique" class="bleu">Pourquoi l'informatique</a></li>
+                <li><a href="#academique" class="blanc">objectif academique</a></li>
+                <li><a href="#Professionnel" class="rouge">objectif professionnel</a></li>
+                <li><a href="#Remerciement" class="rouge">Remerciement</a></li>
+                <li><a href="#contact" class="rouge">Contact</a></li>
+            </ul>
+
     </header>
 
     <section id="Acceuil" class="Acceuil">
          <h1 class="titre"> Bienvenue sur mon site personnel "Campus France Projet" </h1>
-         <p class="paragraph">« L’étude a été pour moi le souverain remède contre les dégoûts de la vie, n’ayant jamais eu un chagrin qu’une heure de lecture n’ait dissipé. » – Montesquieu</p>
-    </section> 
 
+         <p class="paragraph">« L’étude a été pour moi le souverain remède contre les dégoûts de la vie, n’ayant jamais eu un chagrin qu’une heure de lecture n’ait dissipé. » – Montesquieu</p>
+</section> 
+
+         <section id="parcours" class="parcours">
+            <h1 class="titre"> Mon parcours</h1>
+         <p class="paragraph">J’ai obtenu mon baccalauréat en Math-Technique avec la mention “Bien” en 2023, notamment avec d’excellentes notes en mathématiques.
+Après le bac, j’ai intégré une classe préparatoire en sciences et technologies, mais je me suis rapidement rendu compte que ma véritable passion était tournée vers l’informatique et le domaine digital.
+J’ai donc pris la décision de me réorienter vers ce domaine, une étape importante qui m’a permis de mieux définir mon projet d’avenir.
+Aujourd’hui, je poursuis mes études en deuxième année de licence en informatique à l’Université des Sciences et de la Technologie Houari Boumediene (USTHB). Cette formation me permet d’acquérir des bases solides en programmation, en algorithmique, ainsi qu’en design web et cybersécurité.
+</p>
+</section>
+    <section id="informatique" class="informatique">
+        <h1 class="titre"> Pourquoi l'informatique </h1>
+        <p class="paragraph">L’informatique a été pour moi une véritable révélation, surtout après la révolution qu’a apportée l’intelligence artificielle dans le monde de la technologie. Comme beaucoup d’autres, j’ai été émerveillé par cette avancée — même si, en réalité, cette technologie n’est pas aussi récente qu’elle en a l’air.
+Cet intérêt m’a poussé à m’y intéresser de plus près et à approfondir mes recherches. C’est ainsi que j’ai découvert le domaine de la cybersécurité, qui m’a énormément plu.
+Ce qui me passionne également dans l’informatique, c’est la liberté de création qu’elle offre : on peut se lancer en tant que Freelancer à tout moment, développer des idées innovantes et peut-être même  qu’un simple étudiant comme moi peut révolutionner le monde.
+</p>
+
+    </section>
+    <section id="academique" class="academique">
+        <h1 class="titre">Objectif academique</h1>
+        <p class="paragraph">Mon objectif académique est simple, clair et précis : acquérir une base solide en informatique et en mathématiques, tout en profitant de ma période universitaire pour prendre de l’avance dans la maîtrise de la cybersécurité, ainsi que dans plusieurs autres secteurs de l’informatique, notamment l’intelligence artificielle et le développement web, afin de devenir un informaticien polyvalent et professionnel.</p>
+    </section>
+    <section id="Professionnel" class="Professionnel">
+        <h1 class="titre"> Objectif professionnel</h1>
+        <p class="paragraph">Professionnellement, créer ma propre entreprise est pour moi l’objectif ultime. J’aimerais pouvoir fournir des services de sécurité à des entreprises multinationales et gérer tout l’aspect réseau et sécurité.
+Des postes comme Responsable de la Sécurité des Systèmes d’Information (RSSI) m’intéressent tout autant. Je compte bien atteindre cet objectif et laisser ma trace dans ce domaine, en y apportant pourquoi pas une nouvelle révolution.
+</p>
+
+    </section>
+    <section id="Remerciement" class="Remerciement">
+        <h1 class="titre">Remerciement</h1>
+        <p class="paragraph">Je vous remercie d’avoir prêté attention à mon dossier et d’avoir pris le temps de visiter mon site. J’espère vous avoir transmis mes envies et mes objectifs avec clarté. Dans l’attente d’une réponse favorable, je vous prie d’agréer mes salutations les plus respectueuses.</p>
+
+    </section>
     <section id="contact" class="contact">
         <h1 class="titre"> Contact</h1>
-        <p class="paragraph">vous pouvez me joindre via les contacts ci-dessous</p>
-        <div class="icones-contact">
-            <a href="https://github.com/fellakrayanee" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:rayanfellak1@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/rayane-fellak-436583289/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://wa.me/213540013721" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
+        <p class="paragraph">vous pouvez me joindre via les contact ci-dessous</p>
+         <div class="icones-contact">
+            <a href="https://github.com/fellakrayanee" target="_blank" title="GitHub"> 
+                <i class="fab fa-github"></i>
+            
+            </a>
+            <a href="mailto:rayanfellak1@gmail.com" target="_blank" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rayane-fellak-436583289/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i> </a>
+                <a href="https://wa.me/213540013721" target="_blank" title="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+           </div>
+            
+         </div>
+
     </section>
 
 </body>
-</html>
+</html> 
