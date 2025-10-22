@@ -108,32 +108,7 @@
   text-align: center;
   color: white;
 }
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-    padding: 8px 10px;
-    height: auto;
-  }
-  header .logo img {
-    height: 60px;
-  }
-  nav a {
-    font-size: 1em;
-    margin: 6px 5px 0 0;
-  }
-  .titre {
-    font-size: 1.1em;
-    margin-bottom: 25px;
-  }
-  .paragraph {
-    font-size: 1em;
-    padding: 10px 5px;
-    max-width: 98vw;
-  }
-  section {
-    padding-top: 80px;
-  }
-}
+
 .icones-contact {
   margin-top: 25px;
 }
@@ -147,6 +122,19 @@
 .icones-contact a:hover {
   color: #39FF14;
   transform: scale(1.1);
+}
+.menu {
+  display: none;
+}
+@media {max-width: 700px} {
+  header {
+    flex-direction: column;
+    padding: 8px 10px;
+    height: auto;
+    .menu{ display: block;}
+    .navbar{ display: none;
+  }
+    
 }
 
     
@@ -210,7 +198,7 @@ Des postes comme Responsable de la Sécurité des Systèmes d’Information (RSS
     </section>
     <section id="contact" class="contact">
         <h1 class="titre"> Contact</h1>
-        <p class="paragraph">vous pouvez me contacter via les contact ci ci-dessous</p>
+        <p class="paragraph">vous pouvez me joindre via les contact ci-dessous</p>
          <div class="icones-contact">
             <a href="https://github.com/fellakrayanee" target="_blank" title="GitHub"> 
                 <i class="fab fa-github"></i>
@@ -228,6 +216,14 @@ Des postes comme Responsable de la Sécurité des Systèmes d’Information (RSS
            </div>
             
          </div>
+         <input type="checkbox" id="toggle-theme">
+         <label for="toggle-theme" class="menu"><span></span>
+         <span></span>
+         <span></span></label>
+         <ul class="navbar">
+            <li><a href="#Acceuil" class="bleu">Acceuil</a></li>
+            <li><a href="#parcours" class="bleu">Mon parcours</a></li>
+         </ul>
 
     </section>
 
